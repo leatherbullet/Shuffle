@@ -21,13 +21,13 @@ namespace Shuffle
             Random random = new Random();
 
             for (int i = 0; i < number; i++)
-                SwapArray(ref numbers, i, i + random.Next(number - i));
+                SwapArray(numbers, i, i + random.Next(number - i));
 
             for (int i = 0; i < number; i++)
                 Console.Write(numbers[i] + " ");
         }
 
-        static void SwapArray(ref int[] numbers, int index, int randomIndex) 
+        static void SwapArray(int[] numbers, int index, int randomIndex) 
         { 
             int temp = numbers[index];
             numbers[index] = numbers[randomIndex];
